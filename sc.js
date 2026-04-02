@@ -78,3 +78,13 @@ function bresenham(x0, y0, x1, y1) {
     }
 }
 
+function dibujar(){
+    let x0 = parseInt(document.getElementById("x0").value);
+    let y0 = parseInt(document.getElementById("y0").value );
+    let x1 = parseInt(document.getElementById("x1").value);
+    let y1 = parseInt(document.getElementById("y1").value);
+    limpiartabla();
+    dibujarEjes();
+    bresenham(x0, y0, x1, y1);
+}
+dibujarEjes();
