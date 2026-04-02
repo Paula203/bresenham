@@ -49,3 +49,14 @@ function agregarFila(paso, x, y, error) {
     fila.insertCell(2).textContent = y;
     fila.insertCell(3).textContent = error;
 }
+
+function bresenham(x0, y0, x1, y1) {
+
+    let dx = Math.abs(x1 - x0);
+    let dy = Math.abs(y1 - y0);
+    let sx = (x0 < x1) ? 1 : -1;
+    let sy = (y0 < y1) ? 1 : -1;
+    let error = dx - dy;
+    let paso = 0;
+
+    
