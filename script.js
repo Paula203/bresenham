@@ -36,18 +36,20 @@ function limpiartabla() {
             <th> Paso </th>
             <th> X </th>
             <th> Y </th>
-            <th> error </th>
+            <th> err </th>
+            <th> e2 </th>
         </tr>
     `;
 }
 
-function agregarFila(paso, x, y, error) {
+function agregarFila(paso, x, y, err,e2) {
     const tabla = document.getElementById("tabla");
     const fila = tabla.insertRow();
     fila.insertCell(0).textContent = paso;
     fila.insertCell(1).textContent = x;
     fila.insertCell(2).textContent = y;
-    fila.insertCell(3).textContent = error;
+    fila.insertCell(3).textContent = err;
+    fila.insertCell(4).textContent = e2;
 }
 
 function bresenham(x0, y0, x1, y1) {
@@ -56,22 +58,22 @@ function bresenham(x0, y0, x1, y1) {
     let dy = Math.abs(y1 - y0);
     let sx = (x0 < x1) ? 1 : -1;
     let sy = (y0 < y1) ? 1 : -1;
-    let error = dx - dy;
+    let err = dx - dy;
     let paso = 0;
 
     while (true) {
         plot(x0, y0);
-        agregarFila(paso, x0, y0, error);
+        agregarFila(paso, x0, y0, err, err * 2);
         if (x0 === x1 && y0 === y1) break;
 
 
-        let error2 = error * 2;
-        if (error2 > -dy) {
-            error -= dy;
+        let e2 = err * 2;
+        if (e2 > -dy) {
+            err -= dy;
             x0 += sx;
         }
-        if (error2 < dx) {
-            error += dx;
+        if (e2 < dx) {
+            err += dx;
             y0 += sy;
         }
         paso++;
