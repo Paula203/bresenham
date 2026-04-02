@@ -28,3 +28,15 @@ function dibujarEjes() {
         ctx.fillText(i, 5, canvas.height - i * escala);
     }
 }
+
+function limpiartabla() {
+    const tabla = document.getElementById("tabla");
+    tabla.innerHTML = `
+        <tr>
+            <th> Paso </th>
+            <th> X </th>
+            <th> Y </th>
+            <th> error </th>
+        </tr>
+    `;
+}
