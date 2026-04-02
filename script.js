@@ -7,7 +7,7 @@ const escala = 20; // Tamaño de cada celda en píxeles
  * @param {number} x 
  * @param {number} y 
  */
-function dibujarPunto(x, y) {
+function plot(x, y) {
     ctx.fillRect(x * escala, canvas.height - y * escala, escala, escala);
 }
 
@@ -60,7 +60,7 @@ function bresenham(x0, y0, x1, y1) {
     let paso = 0;
 
     while (true) {
-        dibujarPunto(x0, y0);
+        plot(x0, y0);
         agregarFila(paso, x0, y0, error);
         if (x0 === x1 && y0 === y1) break;
 

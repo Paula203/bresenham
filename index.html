@@ -6,23 +6,43 @@
     <title>Bresenham</title>
 
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
         canvas {
             border: 1px solid black;
+            background-color: #f9f9f9;
         }
-        table, th, td {
-            border: 1px solid black;
+
+        table {
+            margin: 20px auto;
             border-collapse: collapse;
-            padding: 4px;
+            width: 50%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        .controles {
+            margin: 20px;
         }
     </style>
 </head>
 <body>
     <h2> ALGORITMO DE BRESENHAM </h2>
 
-    <label> X0: <input type="number" id="x0"></label>
-    <label> Y0: <input type="number" id="y0"></label>
-    <label> X1: <input type="number" id="x1"></label>
-    <label> Y1: <input type="number" id="y1"></label>
+    <label> X0: <input type="number" id="1"></label>
+    <label> Y0: <input type="number" id="1"></label>
+    <label> X1: <input type="number" id="10"></label>
+    <label> Y1: <input type="number" id="7"></label>
 
     <button onclick="dibujar()"> Dibujar </button>
 
@@ -39,7 +59,7 @@
         </tr>
     </table>
 
-    <script src="sc.js"></script>
+    <script src="script.js"></script>
     
 
 </body>
