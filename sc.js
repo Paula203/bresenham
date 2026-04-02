@@ -59,4 +59,22 @@ function bresenham(x0, y0, x1, y1) {
     let error = dx - dy;
     let paso = 0;
 
-    
+    while (true) {
+        dibujarPunto(x0, y0);
+        agregarFila(paso, x0, y0, error);
+        if (x0 === x1 && y0 === y1) break;
+
+
+        let error2 = error * 2;
+        if (error2 > -dy) {
+            error -= dy;
+            x0 += sx;
+        }
+        if (error2 < dx) {
+            error += dx;
+            y0 += sy;
+        }
+        paso++;
+    }
+}
+
