@@ -40,3 +40,12 @@ function limpiartabla() {
         </tr>
     `;
 }
+
+function agregarFila(paso, x, y, error) {
+    const tabla = document.getElementById("tabla");
+    const fila = tabla.insertRow();
+    fila.insertCell(0).textContent = paso;
+    fila.insertCell(1).textContent = x;
+    fila.insertCell(2).textContent = y;
+    fila.insertCell(3).textContent = error;
+}
