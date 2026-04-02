@@ -9,6 +9,7 @@ el ejemplo de la función bresenham adjunta.
 cambios invalidarán el trabajo con notas de cero.</b>
 
 ```javascript
+"hola"
 /**
  * Implementación del algoritmo de líneas de Bresenham.
  * @param {number} x0 - Coordenada X inicial.
